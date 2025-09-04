@@ -1,0 +1,15 @@
+<section>
+  <ul class="list-group list-group-numbered">
+    @for( producto of arrayProductos ; track producto.id){
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+
+        <div class="fw-bold" [routerLink]="['/productos',producto.id]">{{producto.title}}</div>
+
+        Cantidad de producto :<strong> {{producto.quantity}} </strong> unidades
+      </div>
+      <span class="badge text-bg-primary rounded-pill">{{producto.price}}</span>
+    </li>
+    }
+  </ul>
+</section>

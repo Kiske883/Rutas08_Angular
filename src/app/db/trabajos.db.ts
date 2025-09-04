@@ -1,6 +1,6 @@
-import { Iservicio } from "../interfaces/iservicio.interface";
+import { IServicio } from "../interfaces/iservicio.interface";
 
-export const SERVICIOS: Iservicio[] = [
+export const SERVICIOS: IServicio[] = [
   {
     id: 1,
     title: 'Desarrollo Web',

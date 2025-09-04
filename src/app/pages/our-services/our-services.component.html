@@ -1,3 +1,7 @@
+<section class="row g-3">
 @for(servicio of arrayServicio; track servicio.url) {
-    <p>{{servicio.title}}</p>
+    <article class="col-12 col-md-6 col-lg-4">
+    <app-work-card [miServicio]="servicio"></app-work-card>    
+    </article>
 }
+</section>
