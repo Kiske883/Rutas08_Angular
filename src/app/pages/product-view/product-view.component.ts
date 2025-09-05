@@ -1,11 +1,11 @@
 import { Component, inject, Input } from '@angular/core';
 import { IProduct } from '../../interfaces/iproduct.interface';
 import { ProductsService } from '../../services/products.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-product-view',
-  imports: [],
+  imports: [RouterOutlet,RouterLink],
   templateUrl: './product-view.component.html',
   styleUrl: './product-view.component.css'
 })

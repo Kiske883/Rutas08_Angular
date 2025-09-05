@@ -2,6 +2,11 @@
   <h1>{{myProduct.title}}</h1>
   <p>Precio: {{myProduct.price}}</p>
   <p>Cantidad: {{myProduct.quantity}}</p>
-</section>
-   
 
+  <section class="mb-4">
+    <a class=" btn btn-primary me-2" [routerLink]="['/productos',myProduct.id,'descripcion']">Descripcion</a>
+    <a class=" btn btn-primary" [routerLink]="['/productos',myProduct.id,'denominacion-origen']">Denominación Origen</a>
+    <router-outlet></router-outlet>
+  </section>
+  
+</section>

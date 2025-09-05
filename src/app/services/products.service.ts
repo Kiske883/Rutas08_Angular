@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IProduct } from '../interfaces/iproduct.interface';
+import { IDescription, IOrigen, IProduct } from '../interfaces/iproduct.interface';
 import { PRODUCTOS } from '../db/productos.db';
 
 @Injectable({
@@ -18,5 +18,13 @@ export class ProductsService {
   getById(productId:number) : IProduct | undefined {
     return this.arrayProductos.find( product => product.id === productId) ;
   }
+
+  getDescriptionById(id:number) : IDescription | undefined {
+    return this.arrayProductos.find( product => product.id === id)?.description ;
+  }
+
+  getDenominationById(id:number) : IOrigen | undefined {
+    return this.arrayProductos.find( product => product.id === id)?.origen ;
+  }  
   
 }
