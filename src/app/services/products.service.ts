@@ -19,12 +19,13 @@ export class ProductsService {
     return this.arrayProductos.find( product => product.id === productId) ;
   }
 
-  getDescriptionById(id:number) : IDescription | undefined {
-    return this.arrayProductos.find( product => product.id === id)?.description ;
+  getDescriptionById(productId:number) : IDescription | undefined {
+    const product = this.arrayProductos.find(product => product.id === productId) ;
+    return product?.description;
   }
 
-  getDenominationById(id:number) : IOrigen | undefined {
-    return this.arrayProductos.find( product => product.id === id)?.origen ;
-  }  
+  getDenominationById(productId:number) : IOrigen | undefined {
+    const product = this.arrayProductos.find(product => product.id === productId) ;
+    return product?.origen;  }  
   
 }

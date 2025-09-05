@@ -19,11 +19,13 @@ export class DescriptionProductComponent {
 
   productService = inject(ProductsService);
 
-  ngOnInt() {
+  ngOnInit() {
 
     // Hemos de tener en cuenta que en una ruta hija, tenemos que recuperarlo el valor de la ruta padre
     this.activateRoute.parent?.params.subscribe((params : any ) => {
+      
       const id = Number(params.idProduct);
+
       const response = this.productService.getDescriptionById(id) ;
 
       if (response) {

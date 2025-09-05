@@ -15,7 +15,7 @@ export class DenominationOriginComponent {
   originData! : IOrigen ;
   productsService = inject(ProductsService) ;
 
-  ngOnInt() {
+  ngOnInit() {
 
     this.activateRoute.parent?.params.subscribe( (params:any) => {
 
